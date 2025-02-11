@@ -50,7 +50,7 @@ export default function Projects() {
               transition={{ duration: 0.3, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              <Card className="overflow-hidden h-full shadow-lg hover:shadow-xl transition-all duration-300 dark:shadow-primary/5 dark:hover:shadow-primary/10">
+              <Card className="overflow-hidden h-full shadow-lg hover:shadow-xl transition-all duration-300 dark:bg-card dark:shadow-lg dark:shadow-primary/10 dark:hover:shadow-xl dark:hover:shadow-primary/20">
                 <div className="relative overflow-hidden">
                   <img
                     src={project.image}

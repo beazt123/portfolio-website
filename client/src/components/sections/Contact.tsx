@@ -26,7 +26,7 @@ export default function Contact() {
             Want to discuss tech, share project ideas, or just say hi? I'm always excited to connect with fellow developers and tech enthusiasts!
           </p>
 
-          <Card className="shadow-lg hover:shadow-xl transition-all duration-300 dark:shadow-primary/5 dark:hover:shadow-primary/10">
+          <Card className="shadow-lg hover:shadow-xl transition-all duration-300 dark:bg-card dark:shadow-lg dark:shadow-primary/10 dark:hover:shadow-xl dark:hover:shadow-primary/20">
             <CardContent className="p-6">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <motion.div
@@ -51,9 +51,9 @@ export default function Contact() {
                     required
                   />
                 </motion.div>
-                <Button 
-                  type="submit" 
-                  className="w-full hover:scale-[1.02] transition-transform shadow-md hover:shadow-lg" 
+                <Button
+                  type="submit"
+                  className="w-full hover:scale-[1.02] transition-transform shadow-md hover:shadow-lg"
                   size="lg"
                 >
                   <MessageCircle className="mr-2 h-4 w-4" />
