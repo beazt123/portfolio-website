@@ -26,27 +26,23 @@ export default function Contact() {
             Want to discuss tech, share project ideas, or just say hi? I'm always excited to connect with fellow developers and tech enthusiasts!
           </p>
 
-          <Card className="border dark:border-border">
+          <Card>
             <CardContent className="p-6">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <Input placeholder="Your name" required className="dark:border-border" />
+                  <Input placeholder="Your name" required />
                 </div>
                 <div>
-                  <Input type="email" placeholder="Your email" required className="dark:border-border" />
+                  <Input type="email" placeholder="Your email" required />
                 </div>
                 <div>
                   <Textarea
                     placeholder="Share your thoughts, ideas, or just say hello!"
-                    className="min-h-[150px] dark:border-border"
+                    className="min-h-[150px]"
                     required
                   />
                 </div>
-                <Button 
-                  type="submit" 
-                  className="w-full bg-primary text-primary-foreground hover:bg-primary/90 dark:border dark:border-primary" 
-                  size="lg"
-                >
+                <Button type="submit" className="w-full" size="lg">
                   <MessageCircle className="mr-2 h-4 w-4" />
                   Send Message
                 </Button>

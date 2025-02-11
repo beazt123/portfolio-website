@@ -36,10 +36,7 @@ export default function Skills() {
                   <span className="font-medium">{skill.name}</span>
                   <span className="text-muted-foreground">{skill.level}%</span>
                 </div>
-                <Progress 
-                  value={skill.level} 
-                  className="h-2.5 bg-accent/20 dark:bg-muted border dark:border-accent"
-                />
+                <Progress value={skill.level} className="h-2" />
               </motion.div>
             ))}
           </div>
