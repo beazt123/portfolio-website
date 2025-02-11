@@ -16,7 +16,7 @@ export default function Hero() {
         backgroundPosition: 'center',
       }}
     >
-      <div className="absolute inset-0 bg-background/90 backdrop-blur-sm" />
+      <div className="absolute inset-0 bg-background/90 backdrop-blur-sm dark:bg-background/95" />
       <div className="container mx-auto px-4 relative">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -26,7 +26,7 @@ export default function Hero() {
         >
           <h1 className="font-serif text-4xl md:text-6xl font-bold mb-6">
             {greeting}! I'm [Your Name]
-            <span className="text-primary block mt-2">Passionate About Code</span>
+            <span className="text-primary dark:text-primary-foreground block mt-2">Passionate About Code</span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
             A developer who loves creating and tinkering with technology.
