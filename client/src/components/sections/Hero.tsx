@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Download } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -43,6 +43,16 @@ export default function Hero() {
             <Button
               asChild
               variant="outline"
+              size="lg"
+            >
+              <a href="/resume.pdf" download className="group">
+                <Download className="mr-2 h-4 w-4 group-hover:scale-110 transition-transform" />
+                Download Resume
+              </a>
+            </Button>
+            <Button
+              asChild
+              variant="secondary"
               size="lg"
             >
               <a href="#contact">Get in Touch</a>
