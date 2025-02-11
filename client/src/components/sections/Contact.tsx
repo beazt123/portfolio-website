@@ -44,7 +44,7 @@ export default function Contact() {
                 </div>
                 <Button 
                   type="submit" 
-                  className="w-full bg-primary text-primary-foreground hover:bg-primary/90 dark:bg-primary dark:text-primary-foreground dark:hover:bg-primary/90" 
+                  className="w-full bg-primary text-primary-foreground hover:bg-primary/90 dark:border dark:border-primary" 
                   size="lg"
                 >
                   <MessageCircle className="mr-2 h-4 w-4" />

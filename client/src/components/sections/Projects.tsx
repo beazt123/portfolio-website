@@ -64,7 +64,7 @@ export default function Projects() {
                     <Button 
                       variant="outline" 
                       size="sm" 
-                      className="border-primary/50 hover:border-primary dark:border-primary/50 dark:hover:border-primary"
+                      className="border-primary hover:border-primary hover:bg-primary/10 dark:border-primary dark:hover:bg-primary/20"
                       asChild
                     >
                       <a href={project.github} target="_blank" rel="noopener noreferrer">
@@ -74,7 +74,7 @@ export default function Projects() {
                     </Button>
                     <Button 
                       size="sm"
-                      className="bg-primary text-primary-foreground hover:bg-primary/90 dark:bg-primary dark:text-primary-foreground dark:hover:bg-primary/90"
+                      className="bg-primary text-primary-foreground hover:bg-primary/90"
                       asChild
                     >
                       <a href={project.live} target="_blank" rel="noopener noreferrer">

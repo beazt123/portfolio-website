@@ -36,7 +36,7 @@ export default function Hero() {
             <Button
               asChild
               size="lg"
-              className="group"
+              className="bg-primary text-primary-foreground hover:bg-primary/90"
             >
               <a href="#projects">
                 See What I've Built
@@ -47,6 +47,7 @@ export default function Hero() {
               asChild
               variant="outline"
               size="lg"
+              className="border-primary hover:border-primary hover:bg-primary/10 dark:border-primary dark:hover:bg-primary/20"
             >
               <a href="/resume.pdf" download className="group">
                 <Download className="mr-2 h-4 w-4 group-hover:scale-110 transition-transform" />
@@ -57,6 +58,7 @@ export default function Hero() {
               asChild
               variant="secondary"
               size="lg"
+              className="bg-secondary hover:bg-secondary/80 text-secondary-foreground"
             >
               <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="group">
                 <Github className="mr-2 h-4 w-4" />

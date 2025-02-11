@@ -38,7 +38,7 @@ export default function Skills() {
                 </div>
                 <Progress 
                   value={skill.level} 
-                  className="h-2 dark:bg-muted border dark:border-border" 
+                  className="h-2.5 bg-accent/20 dark:bg-muted border dark:border-accent"
                 />
               </motion.div>
             ))}
