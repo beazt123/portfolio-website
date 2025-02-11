@@ -49,7 +49,7 @@ export default function Projects() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              <Card className="overflow-hidden h-full">
+              <Card className="overflow-hidden h-full border dark:border-border">
                 <img
                   src={project.image}
                   alt={project.title}
@@ -61,13 +61,22 @@ export default function Projects() {
                 <CardContent>
                   <p className="text-muted-foreground mb-4">{project.description}</p>
                   <div className="flex gap-4">
-                    <Button variant="outline" size="sm" asChild>
+                    <Button 
+                      variant="outline" 
+                      size="sm" 
+                      className="border-primary/50 hover:border-primary dark:border-primary/50 dark:hover:border-primary"
+                      asChild
+                    >
                       <a href={project.github} target="_blank" rel="noopener noreferrer">
                         <Github className="mr-2 h-4 w-4" />
                         Code
                       </a>
                     </Button>
-                    <Button size="sm" asChild>
+                    <Button 
+                      size="sm"
+                      className="bg-primary text-primary-foreground hover:bg-primary/90 dark:bg-primary dark:text-primary-foreground dark:hover:bg-primary/90"
+                      asChild
+                    >
                       <a href={project.live} target="_blank" rel="noopener noreferrer">
                         <ExternalLink className="mr-2 h-4 w-4" />
                         Live Demo
