@@ -1,8 +1,11 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Download, Github } from "lucide-react";
+import { useTimeGreeting } from "@/hooks/useTimeGreeting";
 
 export default function Hero() {
+  const greeting = useTimeGreeting();
+
   return (
     <section
       id="home"
@@ -22,7 +25,7 @@ export default function Hero() {
           className="max-w-3xl"
         >
           <h1 className="font-serif text-4xl md:text-6xl font-bold mb-6">
-            Hello! I'm [Your Name]
+            {greeting}! I'm [Your Name]
             <span className="text-primary block mt-2">Passionate About Code</span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
