@@ -3,9 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
-import { Send } from "lucide-react";
-import { Checkbox } from "@/components/ui/checkbox";
-import { Label } from "@/components/ui/label";
+import { MessageCircle } from "lucide-react";
 
 export default function Contact() {
   const handleSubmit = (e: React.FormEvent) => {
@@ -23,40 +21,29 @@ export default function Contact() {
           viewport={{ once: true }}
           className="max-w-2xl mx-auto text-center"
         >
-          <h2 className="font-serif text-3xl md:text-4xl font-bold mb-6">Get in Touch</h2>
+          <h2 className="font-serif text-3xl md:text-4xl font-bold mb-6">Let's Connect!</h2>
           <p className="text-muted-foreground mb-12">
-            Have a project in mind or interested in my work? Let's connect and explore opportunities together.
+            Want to discuss tech, share project ideas, or just say hi? I'm always excited to connect with fellow developers and tech enthusiasts!
           </p>
 
           <Card>
             <CardContent className="p-6">
               <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div>
-                    <Input placeholder="Name" required />
-                  </div>
-                  <div>
-                    <Input type="email" placeholder="Email" required />
-                  </div>
+                <div>
+                  <Input placeholder="Your name" required />
                 </div>
                 <div>
-                  <Input placeholder="Subject" required />
+                  <Input type="email" placeholder="Your email" required />
                 </div>
                 <div>
                   <Textarea
-                    placeholder="Your message"
+                    placeholder="Share your thoughts, ideas, or just say hello!"
                     className="min-h-[150px]"
                     required
                   />
                 </div>
-                <div className="flex items-center space-x-2">
-                  <Checkbox id="request-resume" />
-                  <Label htmlFor="request-resume" className="text-sm">
-                    Request a copy of my resume
-                  </Label>
-                </div>
                 <Button type="submit" className="w-full" size="lg">
-                  <Send className="mr-2 h-4 w-4" />
+                  <MessageCircle className="mr-2 h-4 w-4" />
                   Send Message
                 </Button>
               </form>

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Download } from "lucide-react";
+import { ArrowRight, Download, Github } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -22,12 +22,12 @@ export default function Hero() {
           className="max-w-3xl"
         >
           <h1 className="font-serif text-4xl md:text-6xl font-bold mb-6">
-            Creating Digital
-            <span className="text-primary"> Experiences</span>
+            Hello! I'm [Your Name]
+            <span className="text-primary block mt-2">Passionate About Code</span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
-            Software developer crafting elegant solutions through code.
-            Specializing in creating beautiful and functional web applications.
+            A developer who loves creating and tinkering with technology.
+            Always excited to learn new things and share what I've built.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button
@@ -36,7 +36,7 @@ export default function Hero() {
               className="group"
             >
               <a href="#projects">
-                View Projects
+                See What I've Built
                 <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </a>
             </Button>
@@ -47,7 +47,7 @@ export default function Hero() {
             >
               <a href="/resume.pdf" download className="group">
                 <Download className="mr-2 h-4 w-4 group-hover:scale-110 transition-transform" />
-                Download Resume
+                My Resume
               </a>
             </Button>
             <Button
@@ -55,7 +55,10 @@ export default function Hero() {
               variant="secondary"
               size="lg"
             >
-              <a href="#contact">Get in Touch</a>
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="group">
+                <Github className="mr-2 h-4 w-4" />
+                My GitHub
+              </a>
             </Button>
           </div>
         </motion.div>
