@@ -29,12 +29,14 @@ export default function Header() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-background/80 backdrop-blur-md shadow-sm" : "bg-transparent"
+        isScrolled 
+          ? "bg-background/80 backdrop-blur-md shadow-lg dark:shadow-primary/5" 
+          : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4 py-4">
         <nav className="flex items-center justify-between">
-          <a href="#home" className="text-2xl font-semibold font-serif">
+          <a href="#home" className="text-2xl font-semibold font-serif hover:text-primary transition-colors">
             Portfolio
           </a>
 
@@ -44,7 +46,7 @@ export default function Header() {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-sm hover:text-primary transition-colors"
+                className="text-sm hover:text-primary transition-colors hover:scale-105 transform"
               >
                 {item.name}
               </a>

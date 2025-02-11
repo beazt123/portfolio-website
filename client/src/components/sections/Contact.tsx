@@ -26,23 +26,36 @@ export default function Contact() {
             Want to discuss tech, share project ideas, or just say hi? I'm always excited to connect with fellow developers and tech enthusiasts!
           </p>
 
-          <Card>
+          <Card className="shadow-lg hover:shadow-xl transition-all duration-300 dark:shadow-primary/5 dark:hover:shadow-primary/10">
             <CardContent className="p-6">
               <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <Input placeholder="Your name" required />
-                </div>
-                <div>
-                  <Input type="email" placeholder="Your email" required />
-                </div>
-                <div>
+                <motion.div
+                  whileHover={{ y: -2 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <Input placeholder="Your name" required className="transition-all duration-300 hover:border-primary focus:border-primary" />
+                </motion.div>
+                <motion.div
+                  whileHover={{ y: -2 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <Input type="email" placeholder="Your email" required className="transition-all duration-300 hover:border-primary focus:border-primary" />
+                </motion.div>
+                <motion.div
+                  whileHover={{ y: -2 }}
+                  transition={{ duration: 0.2 }}
+                >
                   <Textarea
                     placeholder="Share your thoughts, ideas, or just say hello!"
-                    className="min-h-[150px]"
+                    className="min-h-[150px] transition-all duration-300 hover:border-primary focus:border-primary"
                     required
                   />
-                </div>
-                <Button type="submit" className="w-full" size="lg">
+                </motion.div>
+                <Button 
+                  type="submit" 
+                  className="w-full hover:scale-[1.02] transition-transform shadow-md hover:shadow-lg" 
+                  size="lg"
+                >
                   <MessageCircle className="mr-2 h-4 w-4" />
                   Send Message
                 </Button>
