@@ -18,7 +18,7 @@ export default function About() {
               whileHover={{ y: -5 }}
               transition={{ duration: 0.2 }}
             >
-              <Card className="h-full shadow-lg hover:shadow-xl transition-all duration-300 dark:bg-card dark:shadow-lg dark:shadow-primary/10 dark:hover:shadow-xl dark:hover:shadow-primary/20">
+              <Card className="card-hover">
                 <CardContent className="p-6">
                   <h3 className="font-serif text-xl font-semibold mb-4">Background</h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -33,7 +33,7 @@ export default function About() {
               whileHover={{ y: -5 }}
               transition={{ duration: 0.2 }}
             >
-              <Card className="h-full shadow-lg hover:shadow-xl transition-all duration-300 dark:bg-card dark:shadow-lg dark:shadow-primary/10 dark:hover:shadow-xl dark:hover:shadow-primary/20">
+              <Card className="card-hover">
                 <CardContent className="p-6">
                   <h3 className="font-serif text-xl font-semibold mb-4">Philosophy</h3>
                   <p className="text-muted-foreground leading-relaxed">

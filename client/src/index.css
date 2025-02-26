@@ -11,3 +11,6 @@
     @apply font-sans antialiased bg-background text-foreground;
   }
 }
+.card-hover {
+  @apply h-full shadow-lg hover:shadow-xl transition-all duration-300 dark:bg-card dark:shadow-lg dark:shadow-primary/10 dark:hover:shadow-xl dark:hover:shadow-primary/20;
+}
