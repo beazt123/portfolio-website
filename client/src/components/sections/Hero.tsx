@@ -3,7 +3,21 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Download, Github } from "lucide-react";
 import { useTimeGreeting } from "@/hooks/useTimeGreeting";
 
-export default function Hero() {
+interface HeroProps {
+  name: string;
+  slogan: string;
+  description: string;
+  resumeUrl: string;
+  githubUrl: string;
+}
+
+export default function Hero({
+  name,
+  slogan,
+  description,
+  resumeUrl,
+  githubUrl,
+}: HeroProps) {
   const greeting = useTimeGreeting();
 
   return (
@@ -25,12 +39,15 @@ export default function Hero() {
           className="max-w-3xl"
         >
           <h1 className="font-serif text-4xl md:text-6xl font-bold mb-6">
-            {greeting}! I'm [Your Name]
-            <span className="text-primary dark:text-primary-foreground block mt-2">Passionate About Code</span>
+            {greeting}! {name && `I'm ${name}.`}
+            {slogan && (
+              <span className="text-primary dark:text-primary-foreground block mt-2 text-2xl md:text-4xl">
+                {slogan}
+              </span>
+            )}
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
-            A developer who loves creating and tinkering with technology.
-            Always excited to learn new things and share what I've built.
+            {description}
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button
@@ -48,7 +65,7 @@ export default function Hero() {
               variant="outline"
               size="lg"
             >
-              <a href="/resume.pdf" download className="group">
+              <a href={resumeUrl} download className="group">
                 <Download className="mr-2 h-4 w-4 group-hover:scale-110 transition-transform" />
                 My Resume
               </a>
@@ -58,7 +75,7 @@ export default function Hero() {
               variant="secondary"
               size="lg"
             >
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="group">
+              <a href={githubUrl} target="_blank" rel="noopener noreferrer" className="group">
                 <Github className="mr-2 h-4 w-4" />
                 My GitHub
               </a>
@@ -69,3 +86,11 @@ export default function Hero() {
     </section>
   );
 }
+
+Hero.defaultProps = {
+  name: "",
+  slogan: "",
+  description: "",
+  resumeUrl: "#",
+  githubUrl: "#",
+};
