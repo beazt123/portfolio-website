@@ -7,7 +7,7 @@ import About from "@/components/sections/About";
 import Skills from "@/components/sections/Skills";
 import Projects from "@/components/sections/Projects";
 import Contact from "@/components/sections/Contact";
-import { heroConfig, socialMediaConfig } from "@/config";
+import { heroConfig, socialMediaConfig, contactConfig, aboutConfig, projectsConfig, skillsConfig } from "@/config";
 
 export default function Home() {
   useEffect(() => {
@@ -28,10 +28,16 @@ export default function Home() {
       <Header />
       <main>
         <Hero {...heroConfig} />
-        <About />
-        <Skills />
-        <Projects />
-        <Contact />
+        <About background={aboutConfig.background} philosophy={aboutConfig.philosophy} />
+        <Projects projects={projectsConfig} />
+        <Skills skills={skillsConfig} />
+        <Contact
+          callToAction={contactConfig.callToAction}
+          facebookUrl={socialMediaConfig.facebookUrl}
+          twitterUrl={socialMediaConfig.twitterUrl}
+          instagramUrl={socialMediaConfig.instagramUrl}
+          linkedinUrl={socialMediaConfig.linkedinUrl}
+        />
       </main>
       <Footer {...socialMediaConfig} />
     </motion.div>

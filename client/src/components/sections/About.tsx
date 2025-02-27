@@ -1,7 +1,12 @@
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 
-export default function About() {
+interface AboutProps {
+  background: string;
+  philosophy: string;
+}
+
+export default function About({ background, philosophy }: AboutProps) {
   return (
     <section id="about" className="py-20 bg-muted/20">
       <div className="container mx-auto px-4">
@@ -22,9 +27,7 @@ export default function About() {
                 <CardContent className="p-6">
                   <h3 className="font-serif text-xl font-semibold mb-4">Background</h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    With a deep passion for technology and design, I've spent years honing my skills
-                    in software development. My journey began with a curiosity about how things work,
-                    leading me to explore various programming languages and frameworks.
+                    {background}
                   </p>
                 </CardContent>
               </Card>
@@ -37,9 +40,7 @@ export default function About() {
                 <CardContent className="p-6">
                   <h3 className="font-serif text-xl font-semibold mb-4">Philosophy</h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    I believe in creating software that not only functions flawlessly but also
-                    provides an exceptional user experience. Every project is an opportunity to
-                    combine technical expertise with creative problem-solving.
+                    {philosophy}
                   </p>
                 </CardContent>
               </Card>

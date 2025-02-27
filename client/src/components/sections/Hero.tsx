@@ -4,19 +4,19 @@ import { ArrowRight, Download, Github } from "lucide-react";
 import { useTimeGreeting } from "@/hooks/useTimeGreeting";
 
 interface HeroProps {
-  name: string;
-  slogan: string;
-  description: string;
-  resumeUrl: string;
-  githubUrl: string;
+  name?: string;
+  slogan?: string;
+  description?: string;
+  resumeUrl?: string;
+  githubUrl?: string;
 }
 
 export default function Hero({
-  name,
-  slogan,
-  description,
-  resumeUrl,
-  githubUrl,
+  name = "",
+  slogan = "",
+  description = "",
+  resumeUrl = "#",
+  githubUrl = "#",
 }: HeroProps) {
   const greeting = useTimeGreeting();
 
@@ -86,11 +86,3 @@ export default function Hero({
     </section>
   );
 }
-
-Hero.defaultProps = {
-  name: "",
-  slogan: "",
-  description: "",
-  resumeUrl: "#",
-  githubUrl: "#",
-};

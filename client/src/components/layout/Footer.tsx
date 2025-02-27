@@ -8,7 +8,12 @@ interface FooterProps {
   instagramUrl?: string;
 }
 
-export default function Footer({ githubUrl, linkedinUrl, email, instagramUrl }: FooterProps) {
+export default function Footer({
+  githubUrl = "",
+  linkedinUrl = "",
+  email = "",
+  instagramUrl = "",
+}: FooterProps) {
   return (
     <footer className="bg-muted/20 py-12 mt-20">
       <div className="container mx-auto px-4">

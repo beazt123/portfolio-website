@@ -3,31 +3,19 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Github, ExternalLink } from "lucide-react";
 
-const projects = [
-  {
-    title: "Project One",
-    description: "A modern web application built with React and Node.js",
-    image: "https://images.unsplash.com/photo-1627389955805-5bf2447e9a75?auto=format&fit=crop&w=600&q=80",
-    github: "https://github.com",
-    live: "https://example.com",
-  },
-  {
-    title: "Project Two",
-    description: "Full-stack e-commerce platform with real-time features",
-    image: "https://images.unsplash.com/photo-1627389955611-70c92a5d2e2b?auto=format&fit=crop&w=600&q=80",
-    github: "https://github.com",
-    live: "https://example.com",
-  },
-  {
-    title: "Project Three",
-    description: "Mobile-first web application with offline capabilities",
-    image: "https://images.unsplash.com/photo-1471086569966-db3eebc25a59?auto=format&fit=crop&w=600&q=80",
-    github: "https://github.com",
-    live: "https://example.com",
-  },
-];
+interface Project {
+  title: string;
+  description: string;
+  image: string;
+  github: string;
+  live: string;
+}
 
-export default function Projects() {
+interface ProjectsProps {
+  projects: Project[];
+}
+
+export default function Projects({ projects }: ProjectsProps) {
   return (
     <section id="projects" className="py-20 bg-muted/20">
       <div className="container mx-auto px-4">

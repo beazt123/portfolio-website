@@ -1,16 +1,21 @@
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Card, CardContent } from "@/components/ui/card";
-import { MessageCircle } from "lucide-react";
+import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
 
-export default function Contact() {
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission here
-  };
+interface ContactProps {
+  callToAction?: string;
+  facebookUrl: string;
+  twitterUrl: string;
+  instagramUrl: string;
+  linkedinUrl: string;
+}
 
+export default function Contact({
+  callToAction = "Connect with me on social media!",
+  facebookUrl,
+  twitterUrl,
+  instagramUrl,
+  linkedinUrl
+}: ContactProps) {
   return (
     <section id="contact" className="py-20">
       <div className="container mx-auto px-4">
@@ -23,45 +28,51 @@ export default function Contact() {
         >
           <h2 className="font-serif text-3xl md:text-4xl font-bold mb-6">Let's Connect!</h2>
           <p className="text-muted-foreground mb-12">
-            Want to discuss tech, share project ideas, or just say hi? I'm always excited to connect with fellow developers and tech enthusiasts!
+            {callToAction}
           </p>
 
-          <Card className="shadow-lg hover:shadow-xl transition-all duration-300 dark:bg-card dark:shadow-lg dark:shadow-primary/10 dark:hover:shadow-xl dark:hover:shadow-primary/20">
-            <CardContent className="p-6">
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <motion.div
-                  whileHover={{ y: -2 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  <Input placeholder="Your name" required className="transition-all duration-300 hover:border-primary focus:border-primary" />
-                </motion.div>
-                <motion.div
-                  whileHover={{ y: -2 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  <Input type="email" placeholder="Your email" required className="transition-all duration-300 hover:border-primary focus:border-primary" />
-                </motion.div>
-                <motion.div
-                  whileHover={{ y: -2 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  <Textarea
-                    placeholder="Share your thoughts, ideas, or just say hello!"
-                    className="min-h-[150px] transition-all duration-300 hover:border-primary focus:border-primary"
-                    required
-                  />
-                </motion.div>
-                <Button
-                  type="submit"
-                  className="w-full hover:scale-[1.02] transition-transform shadow-md hover:shadow-lg"
-                  size="lg"
-                >
-                  <MessageCircle className="mr-2 h-4 w-4" />
-                  Send Message
-                </Button>
-              </form>
-            </CardContent>
-          </Card>
+          <div className="flex justify-center space-x-8">
+            <motion.a
+              href={facebookUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.1 }}
+              transition={{ duration: 0.2 }}
+              className="text-primary"
+            >
+              <Facebook className="h-10 w-10 md:h-12 md:w-12" />
+            </motion.a>
+            <motion.a
+              href={twitterUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.1 }}
+              transition={{ duration: 0.2 }}
+              className="text-primary"
+            >
+              <Twitter className="h-10 w-10 md:h-12 md:w-12" />
+            </motion.a>
+            <motion.a
+              href={instagramUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.1 }}
+              transition={{ duration: 0.2 }}
+              className="text-primary"
+            >
+              <Instagram className="h-10 w-10 md:h-12 md:w-12" />
+            </motion.a>
+            <motion.a
+              href={linkedinUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.1 }}
+              transition={{ duration: 0.2 }}
+              className="text-primary"
+            >
+              <Linkedin className="h-10 w-10 md:h-12 md:w-12" />
+            </motion.a>
+          </div>
         </motion.div>
       </div>
     </section>
