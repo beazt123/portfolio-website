@@ -1,7 +1,14 @@
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { SiGithub, SiLinkedin, SiMailboxdotorg, SiInstagram } from "react-icons/si";
 
-export default function Footer() {
+interface FooterProps {
+  githubUrl?: string;
+  linkedinUrl?: string;
+  email?: string;
+  instagramUrl?: string;
+}
+
+export default function Footer({ githubUrl, linkedinUrl, email, instagramUrl }: FooterProps) {
   return (
     <footer className="bg-muted/20 py-12 mt-20">
       <div className="container mx-auto px-4">
@@ -14,34 +21,45 @@ export default function Footer() {
           <div className="text-center md:text-left mb-6 md:mb-0">
             <h3 className="font-serif text-xl mb-2">Let's Connect</h3>
             <div className="flex space-x-4 justify-center md:justify-start">
-              <a
-                href="https://github.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-primary transition-colors"
-              >
-                <Github className="h-5 w-5" />
-              </a>
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-primary transition-colors"
-              >
-                <Linkedin className="h-5 w-5" />
-              </a>
-              <a
-                href="mailto:contact@example.com"
-                className="hover:text-primary transition-colors"
-              >
-                <Mail className="h-5 w-5" />
-              </a>
+              {githubUrl && (
+                <a
+                  href={githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary transition-colors"
+                >
+                  <SiGithub className="h-5 w-5" />
+                </a>
+              )}
+              {linkedinUrl && (
+                <a
+                  href={linkedinUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary transition-colors"
+                >
+                  <SiLinkedin className="h-5 w-5" />
+                </a>
+              )}
+              {email && (
+                <a
+                  href={`mailto:${email}`}
+                  className="hover:text-primary transition-colors"
+                >
+                  <SiMailboxdotorg className="h-5 w-5" />
+                </a>
+              )}
+              {instagramUrl && (
+                <a
+                  href={instagramUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary transition-colors"
+                >
+                  <SiInstagram className="h-5 w-5" />
+                </a>
+              )}
             </div>
-          </div>
-          <div className="text-center md:text-right">
-            <p className="text-sm text-muted-foreground">
-              © {new Date().getFullYear()} All rights reserved
-            </p>
           </div>
         </motion.div>
       </div>

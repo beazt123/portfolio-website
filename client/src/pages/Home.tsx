@@ -7,7 +7,7 @@ import About from "@/components/sections/About";
 import Skills from "@/components/sections/Skills";
 import Projects from "@/components/sections/Projects";
 import Contact from "@/components/sections/Contact";
-import { heroConfig } from "@/config";
+import { heroConfig, socialMediaConfig } from "@/config";
 
 export default function Home() {
   useEffect(() => {
@@ -33,7 +33,7 @@ export default function Home() {
         <Projects />
         <Contact />
       </main>
-      <Footer />
+      <Footer {...socialMediaConfig} />
     </motion.div>
   );
 }
