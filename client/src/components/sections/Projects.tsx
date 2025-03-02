@@ -8,7 +8,7 @@ interface Project {
   description: string;
   image: string;
   github: string;
-  live: string;
+  live?: string;
 }
 
 interface ProjectsProps {
@@ -58,12 +58,14 @@ export default function Projects({ projects }: ProjectsProps) {
                         Code
                       </a>
                     </Button>
-                    <Button size="sm" asChild className="hover:scale-105 transition-transform">
-                      <a href={project.live} target="_blank" rel="noopener noreferrer">
-                        <ExternalLink className="mr-2 h-4 w-4" />
-                        Live Demo
-                      </a>
-                    </Button>
+                    {project.live && (
+                      <Button size="sm" asChild className="hover:scale-105 transition-transform">
+                        <a href={project.live} target="_blank" rel="noopener noreferrer">
+                          <ExternalLink className="mr-2 h-4 w-4" />
+                          Live Demo
+                        </a>
+                      </Button>
+                    )}
                   </div>
                 </CardContent>
               </Card>
