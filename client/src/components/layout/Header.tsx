@@ -8,8 +8,8 @@ import { ThemeToggle } from "@/components/ui/theme-toggle";
 const navItems = [
   { name: "Home", href: "#home" },
   { name: "About", href: "#about" },
-  { name: "Skills", href: "#skills" },
   { name: "Projects", href: "#projects" },
+  { name: "Skills", href: "#skills" },
   { name: "Contact", href: "#contact" },
 ];
 
@@ -37,7 +37,7 @@ export default function Header() {
       <div className="container mx-auto px-4 py-4">
         <nav className="flex items-center justify-between">
           <a href="#home" className="text-2xl font-semibold font-serif hover:text-primary transition-colors">
-            Portfolio
+            Home
           </a>
 
           {/* Desktop Navigation */}
