@@ -27,7 +27,7 @@ export const projectsConfig = [
   {
     title: "MRT Easy Exit",
     description: "Optimize your metro commute by minimizing walking distances with precise boarding and exiting guidance.",
-    image: "https://images.unsplash.com/photo-1627389955805-5bf2447e9a75?auto=format&fit=crop&w=600&q=80",
+    image: "/NavBuddyBot.png",
     github: "https://github.com/beazt123/SGMRTNav",
     live: "https://t.me/NavBuddyBot"
   },
