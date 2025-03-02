@@ -41,7 +41,7 @@ export const projectsConfig = [
   {
     title: "Retail Audit Automation",
     description: "Streamline and digitize retail audits for Singapore hospital merchants with our award-winning prototype, integrating checklists, photos, and follow-ups into one platform.",
-    image: "https://github.com/beazt123/portfolio-website/blob/main/client/assets/checklist.jpg",
+    image: "/checklist.jpg",
     github: "https://github.com/thespacemanatee/SingHealth-App",
     live: "",
   },
