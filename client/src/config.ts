@@ -1,18 +1,17 @@
 export const heroConfig = {
   name: "Zack",
-  slogan: "Passionate About Code",
-  description: "A developer who loves creating and tinkering with technology. Always excited to learn new things and share what I've built.",
+  slogan: "Putting things in the right place",
+  description: "A developer who loves creating & tinkering with technology. Always excited to learn new things and share what I've built.",
   resumeUrl: "/resume.pdf",
-  githubUrl: "https://github.com",
+  githubUrl: "https://github.com/beazt123",
 };
 
 export const socialMediaConfig = {
-  githubUrl: "https://github.com",
-  linkedinUrl: "https://linkedin.com",
-  email: "contact@example.com",
-  instagramUrl: "https://instagram.com",
-  facebookUrl: "https://facebook.com",
-  twitterUrl: "https://twitter.com",
+  githubUrl: "https://github.com/beazt123",
+  linkedinUrl: "https://www.linkedin.com/in/zhixuanloh/",
+  email: "lohzhixuan2021@outlook.com",
+  instagramUrl: "https://www.instagram.com/wood_werkz/",
+  facebookUrl: "",
 };
 
 export const contactConfig = {
@@ -20,44 +19,36 @@ export const contactConfig = {
 };
 
 export const aboutConfig = {
-  background: "With a deep passion for technology and design, I've spent years honing my skills in software development. My journey began with a curiosity about how things work, leading me to explore various programming languages and frameworks.",
-  philosophy: "I believe in creating software that not only functions flawlessly but also provides an exceptional user experience. Every project is an opportunity to combine technical expertise with creative problem-solving.",
+  background: "I graduated from the Singapore University of Technology & Design (SUTD) with a major in computer engineering. My journey began with building models from ice cream sticks, sparking a passion for creating useful things. For over three years, I've been working as a full stack software engineer, building desktop apps for instrument control.",
+  philosophy: "I believe my mission is to put things in the right place, whether it's reusing household items, speeding up daily work with new tools, or refactoring code. I'm passionate about creating useful things for people I empathize with, aiming to make a real, positive impact on their lives. By focusing on organization, efficiency, and empathy, I strive to create solutions that truly make a difference.",
 };
 
 export const projectsConfig = [
   {
-    title: "Project One",
-    description: "A modern web application built with React and Node.js",
+    title: "MRT Easy Exit",
+    description: "Optimize your metro commute by minimizing walking distances with precise boarding and exiting guidance.",
     image: "https://images.unsplash.com/photo-1627389955805-5bf2447e9a75?auto=format&fit=crop&w=600&q=80",
-    github: "https://github.com",
-    live: "https://example.com",
+    github: "https://github.com/beazt123/SGMRTNav",
+    live: "https://t.me/NavBuddyBot"
   },
   {
-    title: "Project Two",
-    description: "Full-stack e-commerce platform with real-time features",
+    title: "Homemade Alexa",
+    description: "My attempt to build a smart home assisant to control my desk lamp with voice commands, inspired by Google Home and Alexa.",
     image: "https://images.unsplash.com/photo-1627389955611-70c92a5d2e2b?auto=format&fit=crop&w=600&q=80",
-    github: "https://github.com",
-    live: "https://example.com",
+    github: "https://github.com/beazt123/homemade-ai-assistant",
+    live: "",
   },
   {
-    title: "Project Three",
-    description: "Mobile-first web application with offline capabilities",
+    title: "Retail Audit Automation",
+    description: "Streamline and digitize retail audits for Singapore hospital merchants with our award-winning prototype, integrating checklists, photos, and follow-ups into one platform.",
     image: "https://images.unsplash.com/photo-1471086569966-db3eebc25a59?auto=format&fit=crop&w=600&q=80",
-    github: "https://github.com",
-    live: "https://example.com",
+    github: "https://github.com/thespacemanatee/SingHealth-App",
+    live: "",
   },
 ];
 
 export const skillsConfig = [
   "Frontend Development",
   "Backend Development",
-  "UI/UX Design",
-  "Database Management",
-  "DevOps",
-  "Mobile Development",
-  "Cloud Computing",
-  "Machine Learning",
-  "Cybersecurity",
-  "Blockchain",
-  "Data Science",
+  "CICD Automation",
 ];
