@@ -41,7 +41,7 @@ export default function Hero({
           <h1 className="font-serif text-4xl md:text-6xl font-bold mb-6">
             {greeting}! {name && `I'm ${name}.`}
             {slogan && (
-              <span className="text-primary dark:text-primary-foreground block mt-2 text-2xl md:text-4xl">
+              <span className="text-primary dark:text-primary-foreground block mt-2 text-lg md:text-xl">
                 {slogan}
               </span>
             )}
