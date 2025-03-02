@@ -1,20 +1,22 @@
 import { motion } from "framer-motion";
-import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import { SiGithub, SiMailboxdotorg, SiFacebook, SiInstagram, SiLinkedin } from "react-icons/si";
 
 interface ContactProps {
   callToAction?: string;
   facebookUrl: string;
-  twitterUrl: string;
   instagramUrl: string;
   linkedinUrl: string;
+  githubUrl?: string;
+  email?: string;
 }
 
 export default function Contact({
   callToAction = "Connect with me on social media!",
   facebookUrl,
-  twitterUrl,
   instagramUrl,
-  linkedinUrl
+  linkedinUrl,
+  githubUrl,
+  email
 }: ContactProps) {
   return (
     <section id="contact" className="py-20">
@@ -32,46 +34,64 @@ export default function Contact({
           </p>
 
           <div className="flex justify-center space-x-8">
-            <motion.a
-              href={facebookUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ scale: 1.1 }}
-              transition={{ duration: 0.2 }}
-              className="text-primary"
-            >
-              <Facebook className="h-10 w-10 md:h-12 md:w-12" />
-            </motion.a>
-            <motion.a
-              href={twitterUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ scale: 1.1 }}
-              transition={{ duration: 0.2 }}
-              className="text-primary"
-            >
-              <Twitter className="h-10 w-10 md:h-12 md:w-12" />
-            </motion.a>
-            <motion.a
-              href={instagramUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ scale: 1.1 }}
-              transition={{ duration: 0.2 }}
-              className="text-primary"
-            >
-              <Instagram className="h-10 w-10 md:h-12 md:w-12" />
-            </motion.a>
-            <motion.a
-              href={linkedinUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ scale: 1.1 }}
-              transition={{ duration: 0.2 }}
-              className="text-primary"
-            >
-              <Linkedin className="h-10 w-10 md:h-12 md:w-12" />
-            </motion.a>
+            {facebookUrl && (
+              <motion.a
+                href={facebookUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.1 }}
+                transition={{ duration: 0.2 }}
+                className="text-primary"
+              >
+                <SiFacebook className="h-10 w-10 md:h-12 md:w-12" />
+              </motion.a>
+            )}
+            {instagramUrl && (
+              <motion.a
+                href={instagramUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.1 }}
+                transition={{ duration: 0.2 }}
+                className="text-primary"
+              >
+                <SiInstagram className="h-10 w-10 md:h-12 md:w-12" />
+              </motion.a>
+            )}
+            {linkedinUrl && (
+              <motion.a
+                href={linkedinUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.1 }}
+                transition={{ duration: 0.2 }}
+                className="text-primary"
+              >
+                <SiLinkedin className="h-10 w-10 md:h-12 md:w-12" />
+              </motion.a>
+            )}
+            {githubUrl && (
+              <motion.a
+                href={githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.1 }}
+                transition={{ duration: 0.2 }}
+                className="text-primary"
+              >
+                <SiGithub className="h-10 w-10 md:h-12 md:w-12" />
+              </motion.a>
+            )}
+            {email && (
+              <motion.a
+                href={`mailto:${email}`}
+                whileHover={{ scale: 1.1 }}
+                transition={{ duration: 0.2 }}
+                className="text-primary"
+              >
+                <SiMailboxdotorg className="h-10 w-10 md:h-12 md:w-12" />
+              </motion.a>
+            )}
           </div>
         </motion.div>
       </div>
