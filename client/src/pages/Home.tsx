@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect } from "react";
 import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
 import Hero from "@/components/sections/Hero";
 import About from "@/components/sections/About";
 import Skills from "@/components/sections/Skills";
@@ -11,7 +10,6 @@ import { heroConfig, socialMediaConfig, contactConfig, aboutConfig, projectsConf
 
 export default function Home() {
   useEffect(() => {
-    // Smooth scroll behavior
     document.documentElement.style.scrollBehavior = "smooth";
     return () => {
       document.documentElement.style.scrollBehavior = "auto";
@@ -33,13 +31,9 @@ export default function Home() {
         <Skills skills={skillsConfig} />
         <Contact
           callToAction={contactConfig.callToAction}
-          facebookUrl={socialMediaConfig.facebookUrl}
-          twitterUrl={socialMediaConfig.twitterUrl}
-          instagramUrl={socialMediaConfig.instagramUrl}
-          linkedinUrl={socialMediaConfig.linkedinUrl}
+          {...socialMediaConfig}
         />
       </main>
-      <Footer {...socialMediaConfig} />
-    </motion.div>
+          </motion.div>
   );
 }
