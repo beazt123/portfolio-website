@@ -1,3 +1,6 @@
+import { FaReact, FaJava, FaPython, FaVuejs, FaAngular, FaGithub } from "react-icons/fa";
+import { SiTypescript, SiDjango, SiSpring } from "react-icons/si";
+
 export const heroConfig = {
   name: "Zack",
   slogan: "Putting things in the right place",
@@ -48,7 +51,14 @@ export const projectsConfig = [
 ];
 
 export const skillsConfig = [
-  "Frontend Development",
-  "Backend Development",
-  "CICD Automation",
+  { name: "Angular", icon: FaAngular },
+  { name: "React", icon: FaReact },
+  { name: "Vue.js", icon: FaVuejs },
+  { name: "Java", icon: FaJava },
+  { name: "TypeScript", icon: SiTypescript },
+  { name: "Django", icon: SiDjango },
+  { name: "Spring Boot", icon: SiSpring },
+  { name: "Python", icon: FaPython },
+  // { name: "JMeter", icon: SiJmeter },
+  { name: "GitHub Actions", icon: FaGithub },
 ];

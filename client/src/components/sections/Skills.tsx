@@ -1,14 +1,15 @@
 import { motion } from "framer-motion";
+import { FaReact, FaNodeJs, FaDatabase, FaAws, FaMobileAlt, FaLaptopCode, FaPaintBrush, FaCloud } from "react-icons/fa";
 
 const defaultSkills = [
-  "Frontend Development",
-  "Backend Development",
-  "UI/UX Design",
-  "Database Management",
-  "DevOps",
-  "Mobile Development",
-  "Cloud Computing",
-  "Machine Learning",
+  { name: "Frontend Development", icon: FaLaptopCode },
+  { name: "Backend Development", icon: FaNodeJs },
+  { name: "UI/UX Design", icon: FaPaintBrush },
+  { name: "Database Management", icon: FaDatabase },
+  { name: "DevOps", icon: FaAws },
+  { name: "Mobile Development", icon: FaMobileAlt },
+  { name: "Cloud Computing", icon: FaCloud },
+  { name: "Machine Learning", icon: FaReact },
 ];
 
 export default function Skills({ skills = defaultSkills }) {
@@ -23,17 +24,18 @@ export default function Skills({ skills = defaultSkills }) {
           className="max-w-4xl mx-auto text-center"
         >
           <h2 className="font-serif text-3xl md:text-4xl font-bold mb-6">Technical Expertise</h2>
-          <div className="mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+          <div className="mt-12 flex flex-wrap justify-center gap-4">
             {skills.map((skill, index) => (
               <motion.div
-                key={skill}
+                key={skill.name}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="p-4 bg-white dark:bg-card shadow-lg rounded-lg hover:shadow-xl transition-shadow duration-300"
+                className="flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-full shadow-md"
               >
-                <span className="font-medium text-lg">{skill}</span>
+                <skill.icon className="text-lg" />
+                <span className="font-medium text-lg">{skill.name}</span>
               </motion.div>
             ))}
           </div>
