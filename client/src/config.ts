@@ -5,7 +5,7 @@ export const heroConfig = {
   name: "Zack",
   slogan: "Putting things in the right place",
   description: "A developer who loves creating & tinkering with technology. Always excited to learn new things and share what I've built.",
-  resumeUrl: "/resume.pdf",
+  resumeUrl: "/Loh_Zhi_Xuan_Resume.pdf",
   githubUrl: "https://github.com/beazt123",
 };
 
