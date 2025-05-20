@@ -51,6 +51,7 @@ export const projectsConfig = [
 ];
 
 export const skillsConfig = [
+  { name: "GitHub Copilot", icon: FaGithub }, // Using FaGithub as a placeholder icon
   { name: "Angular", icon: FaAngular },
   { name: "React", icon: FaReact },
   { name: "Vue.js", icon: FaVuejs },
