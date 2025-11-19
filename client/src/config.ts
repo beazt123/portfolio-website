@@ -48,6 +48,13 @@ export const projectsConfig = [
     github: "https://github.com/thespacemanatee/SingHealth-App",
     live: "",
   },
+  {
+    title: "Chess Clock",
+    description: "A simple vibe-coded chess clock application built with React and TypeScript, featuring customizable timers and intuitive controls for an enhanced chess experience.",
+    image: "/chess-clock.jpg",
+    github: "https://github.com/beazt123/chess-clock",
+    live: "https://my-chess-clock.vercel.app",
+  },
 ];
 
 export const skillsConfig = [
