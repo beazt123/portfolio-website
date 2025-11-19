@@ -51,7 +51,7 @@ export const projectsConfig = [
   {
     title: "Chess Clock",
     description: "A simple vibe-coded chess clock application built with React and TypeScript, featuring customizable timers and intuitive controls for an enhanced chess experience.",
-    image: "/chess-clock.jpg",
+    image: "/chess-clock.png",
     github: "https://github.com/beazt123/chess-clock",
     live: "https://my-chess-clock.vercel.app",
   },
